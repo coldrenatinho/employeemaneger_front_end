@@ -5,9 +5,6 @@ const EmployeeComponent = () => {
   const [lastName, setLastName] = useState("");
   const [emailId, setEmailId] = useState("");
 
-  const handleLastNameChange = (event) => setLastName(event.target.value);
-  const handleEmailNameChange = (event) => setEmailId(event.target.value);
-
   const savedEmployee = (event) => {
     event.preventDefault();
     const employee = { firstName, lastName, emailId };
@@ -48,7 +45,7 @@ const EmployeeComponent = () => {
                     placeholder="Digite o sobrenome do empregado"
                     value={lastName}
                     className="form-control"
-                    onChange={(event) => handleLastNameChange(event)}
+                    onChange={(event) => setLastName(event.target.value)}
                   />
                 </div>
                 <div className="form-group nb-2">
@@ -62,7 +59,7 @@ const EmployeeComponent = () => {
                     placeholder="Digite o email do empregado"
                     value={emailId}
                     className="form-control"
-                    onChange={(event) => handleEmailNameChange(event)}
+                    onChange={(event) => setEmailId(event.target.value)}
                   />
                 </div>
                 <br />
