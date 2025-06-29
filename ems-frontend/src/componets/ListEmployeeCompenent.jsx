@@ -23,7 +23,10 @@ const ListEmployeeCompenent = () => {
     return (
         <div className='container'>
             {/* Título centralizado */}
-            <h2 className='text-center'>Lista de Empregados</h2>
+            <h2 className='text-center' style={{padding: '1vw'}}>Lista de Empregados</h2>
+            <div style={{display: 'flex', alignContent: 'center', justifyContent: 'flex-start', flexDirection: 'row'}}>
+               <button type="button" className="btn btn-primary" style={{flexShrink: 1, flexGrow: 1, flexBasis: "10vw", padding: "20px", margin: "40px"}}>Primary</button> 
+            </div>
             {/* Tabela estilizada com Bootstrap */}
             <table className='table table-striped table-bordered table-hover'>
                 <thead className='thead-dark'>

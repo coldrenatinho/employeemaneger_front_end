@@ -1,15 +1,22 @@
-import { useState } from 'react'
 import './App.css'
-import HelloWord from './HelloWord'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ListEmployeeCompenent from './componets/ListEmployeeCompenent'
+import HeaderComponent from './componets/HeaderComponent'
+import FooterComponet from './componets/FooterComponet'
+import {BrowserRouter, Router, Route, Routes} from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <ListEmployeeCompenent />
+      <BrowserRouter>
+        <HeaderComponent />
+        <Routes>
+          <Route path='/' element = { <ListEmployeeCompenent />} ></Route>
+          <Route path='/employees' element = { <ListEmployeeCompenent />} ></Route>
+        </Routes>
+        <FooterComponet />
+      </BrowserRouter>
     </>
   )
 }
