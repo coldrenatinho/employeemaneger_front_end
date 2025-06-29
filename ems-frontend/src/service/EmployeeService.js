@@ -1,9 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 
-const API_URL = 'http://localhost:8080/api/v1/employees/getAllEmployees';
+const API_URL = "http://localhost:8080/api/v1/employees/getAllEmployees";
 
-export const listEmployees = () => {return axios.get(API_URL);}
-
-
-
-
+export const listEmployees = () => {
+  return axios.get(API_URL);
+};
